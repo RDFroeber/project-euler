@@ -7,7 +7,7 @@ $(function(){
 
    var multiples = []
    for(i = 0; i < nums.length; i++){
-      if(nums[i] % 3 == 0 || nums[i] % 3 === 0 ){
+      if(nums[i] % 3 == 0 || nums[i] % 5 === 0 ){
          multiples.push(nums[i]);
          // Need to remove 0
       }
@@ -16,7 +16,7 @@ $(function(){
 
    var sum = 0
    for(i = 0; i < multiples.length; i++){
-      sum = multiples[i]++;
+      sum += multiples[i];
    }
    console.log(sum);
 });
