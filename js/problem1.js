@@ -1,4 +1,4 @@
-$(function(){
+$(function solveOne(){
    var button = $("#button1");
 
    button.click(function(e){
