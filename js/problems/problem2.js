@@ -1,5 +1,4 @@
-$(function(){
-
+function solveTwo(){
    var button = $("#button2");
 
    button.click(function(e){
@@ -47,4 +46,4 @@ $(function(){
       // Filling the HTML element with the sequence values separated by a comma
       window.setTimeout(function(){$("#problem2").text(sum)}, 3000);
    });
-});
+}
