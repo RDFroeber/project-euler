@@ -14,6 +14,6 @@ require(['jquery', 'under', 'problems'], function($, under, problems){
   $(function(){
     problems.solveOne();
     problems.solveTwo();
-    // problems.solveThree();
+    problems.solveThree();
   });
 });
