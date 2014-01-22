@@ -93,14 +93,24 @@ define(['jquery','under'], function($, under){
 
       // PROBLEM 3
       self.solveThree = function(){
+      // a number n > 1 is prime if it cannot be written as a product of two integers a and b, both of which are larger than 1: n = a · b.
+      
       // The prime factors of 13195 are 5, 7, 13 and 29.
       // What is the largest prime factor of the number 600851475143 ?
         var button = $("#button3");
 
          button.click(function(e){
+            var num = 600851475143;
+            var prime = 1;
+            if(num > 1){
+               for(var i = 0; i < num; i++){
+                  if(num % i === 0){
+                     prime = i;
+                  }
+               }
+            }
 
-
-          $("#problem3").text(answer)
+          $("#problem3").text(prime)
          });
 
       }
