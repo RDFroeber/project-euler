@@ -100,19 +100,30 @@ define(['jquery','under'], function($, under){
         var button = $("#button3");
 
          button.click(function(e){
+            e.preventDefault();
+
             var num = 600851475143;
-            var prime = 1;
+            var primes = [];
             if(num > 1){
-               for(var i = 0; i < num; i++){
-                  if(num % i === 0){
-                     prime = i;
+               for (var i = 1; i <= num; i++){
+                  if(checkPrime(i) === true){
+                     primes.push(i);
                   }
                }
             }
 
-          $("#problem3").text(prime)
-         });
+            // checkPrime not valid yet
+            function checkPrime(n){
+               for (var i = 2; i <= n - 1; i++){
+                  if (n % i === 0){
+                     return false;
+                  }
+                  return true;
+               }
+            }
 
+          $("#problem3").text($(primes).last())
+         });
       }
    }
 });
